@@ -50,7 +50,7 @@ function App() {
           setSearch(userName);
         }}
       />
-      <div className="relative flex justify-between flex-wrap gap-6 my-12 p-4 bg-blue-200 rounded-2xl">
+      <div className="flex justify-between flex-wrap gap-6 my-12 p-4 bg-blue-200 rounded-2xl">
         {users.map((user, index) => {
           return <User key={`user-${index}`} index={index} user={user} />;
         })}

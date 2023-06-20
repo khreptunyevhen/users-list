@@ -1,7 +1,7 @@
 const Modal = ({ user, modal, setModal, fullName }) => {
   return (
     <div
-      className="absolute flex flex-col top-10 -left-5 min-w-[440px] bg-white px-10 py-4 rounded-3xl shadow-lg"
+      className="absolute flex flex-col top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-[440px] bg-white px-10 py-4 rounded-3xl shadow-lg"
       style={{
         display: modal.showModal ? "block" : "none",
       }}
