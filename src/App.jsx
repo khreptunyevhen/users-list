@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     (async () => {
       const fetchData = await fetch(
-        "https://randomuser.me/api/?inc=name,picture&results=10"
+        "https://randomuser.me/api/?inc=name,picture&results=6"
       );
 
       const getUsersInfo = await fetchData.json();
@@ -38,9 +38,10 @@ function App() {
   }, [search]);
 
   return (
-    <div>
+    <div className="w-[400px] mx-auto pt-12">
       <Header />
       <input
+        className="w-full p-2 rounded-xl outline-none focus:shadow-lg"
         type="text"
         placeholder="Find a user..."
         onChange={(event) => {
@@ -49,7 +50,7 @@ function App() {
           setSearch(userName);
         }}
       />
-      <div>
+      <div className="relative flex justify-between flex-wrap gap-6 my-12 p-4 bg-blue-200 rounded-2xl">
         {users.map((user, index) => {
           return <User key={`user-${index}`} index={index} user={user} />;
         })}
